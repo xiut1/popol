@@ -58,3 +58,7 @@
   height: 3000px;
 }
 
+.container section {
+  height: 500px;
+  border-bottom: 2px solid #dddddd
+}
