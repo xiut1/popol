@@ -6,12 +6,12 @@
   </div>
 </template>
 
+<!-- https://www.youtube.com/watch?v=X7IBa7vZjmo -->
 <script>
 import gsap from "gsap";
-import vueScrollTrigger from "vue-scroll-trigger";
+import { ScrollTrigger } from "gsap/ScrollTrigger.js"
 
-//
-gsap.registerPlugin (vueScrollTrigger);
+gsap.registerPlugin ( ScrollTrigger );
 
 export default {
   name: "scrolltrigger",

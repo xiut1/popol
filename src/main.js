@@ -12,17 +12,11 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 
-// gsap
-import gsap from 'gsap'
-
-// scroll trigger
-import vueScrollTrigger from 'vue-scroll-trigger'
-
 // custom css
 import '@/assets/css/reset.css'
 import '@/assets/css/ui.css'
 
-Vue.use(BootstrapVue, IconsPlugin, gsap, vueScrollTrigger)
+Vue.use(BootstrapVue, IconsPlugin)
 
 Vue.config.productionTip = false
 
