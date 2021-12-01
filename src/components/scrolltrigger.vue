@@ -1,45 +1,48 @@
 <template>
   <div>
-    <transition-group appear @enter="bt">
-      <div class="box a" key="bt">a</div>
+    <div style="display: flex; justify-content: center; align-items: center; height: 500px; background-color: #dddddd;">
+      <p>dummy</p>
+    </div>
+    <transition-group class="container" appear @enter="bt">
+      <div class="box a" key="bt">
+        <p></p>
+      </div>
     </transition-group>
+    <div style="display: flex; justify-content: center; align-items: center; height: 500px; background-color: #dddddd;">
+      <p>dummy</p>
+    </div>
   </div>
 </template>
 
 <!-- https://www.youtube.com/watch?v=X7IBa7vZjmo -->
 <script>
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger.js"
+import {ScrollTrigger} from "gsap/ScrollTrigger.js"
+import TextPlugin from "gsap/TextPlugin"
 
-gsap.registerPlugin ( ScrollTrigger );
+gsap.registerPlugin(ScrollTrigger, TextPlugin);
 
 export default {
   name: "scrolltrigger",
   methods: {
-    // at (el) {
-    //   el.style.opacity = 0
-    //   el.style.transform = 'translateY(60px)'
-    // },
-    // bt (el) {
-    //   // here need gsap
-    //   gsap.from (el, {
-    //     opacity: 1,
-    //     y: 0,
-    //     duration: 1
-    //   })
-    // }
-    bt () {
+    bt() {
       // here need gsap
-      gsap.to (".a", {
+      gsap.to(".a", {
         scrollTrigger: {
           trigger: ".a",
           start: "top center",
-          markers: true,
-          toggleActions: "play none none none"
+          toggleActions: "play pause resume reverse", // play, pause, resume, reset, complete, reverse, none
+          markers: true, // dev-tool 테스트용 마커 표시
+          pin: true // 화면 고정기능
         },
         x: 400,
-        rotate: 360,
-        duration: 3
+        duration: 2, // 작업이 완료 되기까지의 걸리는 시간
+        backgroundColor: "#ffffff",
+        text: { // 텍스트 타이핑 애니메이션
+          value: "이봐 김씨 까불지말고 이거나 날라"
+          // newClass: "class2",
+          // delimiter: ""
+        }
       })
     }
   }
@@ -48,13 +51,15 @@ export default {
 
 <style scoped>
 .box {
-  width: 20px;
-  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 150px;
   background-color: #dddddd;
-  animation-name: bounceInDown;
 }
 
-.box a {
+.box p {
 
 }
 </style>
