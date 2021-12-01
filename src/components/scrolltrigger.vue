@@ -1,19 +1,19 @@
 <template>
   <div>
     <div style="display: flex; justify-content: center; align-items: center; height: 500px; background-color: #dddddd;">
-      <p> {{ dummy }} </p>
+      <p>dummy</p>
     </div>
     <transition-group class="container" appear @enter="bt">
       <div class="box a" key="bt"></div>
     </transition-group>
     <div style="display: flex; justify-content: center; align-items: center; height: 500px; background-color: #dddddd;">
-      <p> {{ dummy }} </p>
+      <p>dummy</p>
     </div>
     <div style="display: flex; justify-content: center; align-items: center; height: 500px; background-color: #dddddd;">
-      <p> {{ dummy }} </p>
+      <p>dummy</p>
     </div>
     <div style="display: flex; justify-content: center; align-items: center; height: 500px; background-color: #dddddd;">
-      <p> {{ dummy }} </p>
+      <p>dummy</p>
     </div>
   </div>
 </template>
@@ -28,11 +28,6 @@ gsap.registerPlugin(ScrollTrigger, TextPlugin);
 
 export default {
   name: "scrolltrigger",
-  data() {
-    return {
-      message: "dummy"
-    }
-  },
   methods: {
     bt() {
       // here need gsap

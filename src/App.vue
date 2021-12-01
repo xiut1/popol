@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div class="wrap">
-       <router-view/>
+<!--       <router-view/>-->
       <div class="header">
         <div class="p-header">
           <div class="p-header-list">
