@@ -2,7 +2,6 @@
   <div id="app">
     <div>
       <div class="wrap">
-        <!--       <router-view/>-->
         <div class="header">
           <div class="p-header">
             <div class="p-header-list">
