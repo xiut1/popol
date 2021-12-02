@@ -1,12 +1,16 @@
 <template>
   <div>
-    <div style="display: flex; justify-content: center; align-items: center; height: 500px;"></div>
-    <transition-group class="container" appear @enter="at">
-      <div key="at">
-        <section class="box a"></section>
-        <section class="box b"></section>
+    <section class="section-wrap at">
+      <div class="section-content">
+        <div class="inner-text">
+          <transition-group appear @enter="at">
+            <h1 class="a" key="at">hello</h1>
+            <h2 class="b" key="at">무야호 무야호 무야호</h2>
+          </transition-group>
+        </div>
+        <img class="" src="../assets/images/sample_image.jpg" alt="">
       </div>
-    </transition-group>
+    </section>
     <div style="display: flex; justify-content: center; align-items: center; height: 500px;"></div>
     <div style="display: flex; justify-content: center; align-items: center; height: 500px;"></div>
     <!--    <transition-group class="container" appear @enter="ct">-->
@@ -27,41 +31,54 @@ export default {
   name: "scrolltrigger",
   methods: {
     at() {
-      gsap.from(".a", {
+      gsap.to(".a", {
         scrollTrigger: {
-          trigger: ".a",
+          trigger: ".at",
           start: "top center",
           // end: "bottom bottom",
-          toggleActions: "play pause resume reverse", // play, pause, resume, reset, complete, reverse, none
+          toggleActions: "play none none none", // play, pause, resume, reset, complete, reverse, none
           markers: true // dev-tool 테스트용 마커 표시
           // pin: true // 화면 고정기능
         },
-        // x: 400,
+        y: 0,
         duration: 2,
-        backgroundColor: "#ffffff",
+        opacity: 1,
         ease: 'power4.inOut',
-        text: { // 텍스트 타이핑 애니메이션
-          value: "무야호무야호무야호무야호무야호무야호무야호무야호"
-        }
       })
 
       gsap.to(".b", {
         scrollTrigger: {
-          trigger: ".b",
+          trigger: ".at",
           start: "top center",
           // end: "bottom bottom",
-          toggleActions: "play pause resume reverse", // play, pause, resume, reset, complete, reverse, none
+          toggleActions: "play none none none", // play, pause, resume, reset, complete, reverse, none
           markers: true // dev-tool 테스트용 마커 표시
           // pin: true // 화면 고정기능
         },
-        // x: 400,
-        duration: 4,
-        backgroundColor: "#ffffff",
-        ease: 'power2.inOut',
-        text: { // 텍스트 타이핑 애니메이션
-          value: "무야호무야호무야호무야호무야호무야호무야호무야호"
-        }
+        y: 0,
+        delay: 2,
+        duration: 2,
+        opacity: 1,
+        ease: 'power4.inOut',
       })
+
+      // gsap.to(".b", {
+      //   scrollTrigger: {
+      //     trigger: ".b",
+      //     start: "top center",
+      //     // end: "bottom bottom",
+      //     toggleActions: "play pause resume reverse", // play, pause, resume, reset, complete, reverse, none
+      //     markers: true // dev-tool 테스트용 마커 표시
+      //     // pin: true // 화면 고정기능
+      //   },
+      //   // x: 400,
+      //   duration: 4,
+      //   backgroundColor: "#ffffff",
+      //   ease: 'power2.inOut',
+      //   text: { // 텍스트 타이핑 애니메이션
+      //     value: "무야호무야호무야호무야호무야호무야호무야호무야호"
+      //   }
+      // })
     },
   }
 }

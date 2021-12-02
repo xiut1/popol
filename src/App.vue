@@ -2,19 +2,19 @@
   <div id="app">
     <div>
       <div class="wrap">
-        <div class="header">
-          <div class="p-header">
-            <div class="p-header-list">
-              <ul>
-                <li><a href="">ABOUT</a></li>
-                <li><a href="">SKILL</a></li>
-                <li><a href="">PROJECT</a></li>
-                <li><a href="">CAREER</a></li>
-                <li><a href="">TIMELINE</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
+<!--        <div class="header">-->
+<!--          <div class="p-header">-->
+<!--            <div class="p-header-list">-->
+<!--              <ul>-->
+<!--                <li><a href="">ABOUT</a></li>-->
+<!--                <li><a href="">SKILL</a></li>-->
+<!--                <li><a href="">PROJECT</a></li>-->
+<!--                <li><a href="">CAREER</a></li>-->
+<!--                <li><a href="">TIMELINE</a></li>-->
+<!--              </ul>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
         <div class="container">
           <scrolltrigger></scrolltrigger>
         </div>

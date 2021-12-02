@@ -49,21 +49,46 @@ html, body {
 
 .container {
   width: 100%;
-  max-width: 1280px;
   margin-top: 60px;
 }
 
 .container section {
-  width: 100%;
-  height: 100vh;
+
+}
+
+.container .section-wrap .section-content {
+  margin: 0 auto;
+  max-width: 1120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container .section-wrap .section-content .inner-text {
+
+}
+
+.container .section-wrap .section-content .inner-text h1 {
+  font-size: 42px;
+  transform: translateY(-100px);
+  opacity: 0;
+}
+
+.container .section-wrap .section-content .inner-text h2 {
+  font-size: 21px;
+  transform: translateY(-100px);
+  opacity: 0;
+}
+
+.container .section-wrap .section-content .inner-text h1 ~ h2 {
+  margin-top: 60px;
+}
+
+.container .section-wrap .section-content img {
+  width: 350px;
+  border-radius: 50%;
 }
 
 .footer {
 
 }
-
-/*@media screen and (max-width: 720px){*/
-/*  .container {*/
-/*    max-width: 100%;*/
-/*  }*/
-/*}*/
