@@ -13,10 +13,6 @@ Vue.component('v-icon', Icon)
 // import 'bootstrap-vue/dist/bootstrap-vue.css'
 // import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 
-// custom css
-import '@/assets/css/reset.css'
-import '@/assets/css/ui.css'
-
 // Vue.use(BootstrapVue, IconsPlugin)
 
 Vue.config.productionTip = false
