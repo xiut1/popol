@@ -56,29 +56,11 @@ export default {
           // pin: true // 화면 고정기능
         },
         y: 0,
-        delay: 2,
+        delay: 1,
         duration: 2,
         opacity: 1,
         ease: 'power4.inOut',
       })
-
-      // gsap.to(".b", {
-      //   scrollTrigger: {
-      //     trigger: ".b",
-      //     start: "top center",
-      //     // end: "bottom bottom",
-      //     toggleActions: "play pause resume reverse", // play, pause, resume, reset, complete, reverse, none
-      //     markers: true // dev-tool 테스트용 마커 표시
-      //     // pin: true // 화면 고정기능
-      //   },
-      //   // x: 400,
-      //   duration: 4,
-      //   backgroundColor: "#ffffff",
-      //   ease: 'power2.inOut',
-      //   text: { // 텍스트 타이핑 애니메이션
-      //     value: "무야호무야호무야호무야호무야호무야호무야호무야호"
-      //   }
-      // })
     },
   }
 }
