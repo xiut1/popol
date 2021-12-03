@@ -1,5 +1,6 @@
 <template>
   <div>
+    <!-- about -->
     <section class="section-wrap at">
       <div class="section-content">
         <div class="inner-text">
@@ -11,11 +12,33 @@
         <img class="" src="../assets/images/sample_image.jpg" alt="">
       </div>
     </section>
-    <div style="display: flex; justify-content: center; align-items: center; height: 500px;"></div>
-    <div style="display: flex; justify-content: center; align-items: center; height: 500px;"></div>
-    <!--    <transition-group class="container" appear @enter="ct">-->
-    <!--      <section class="box c" key="ct"></section>-->
-    <!--    </transition-group>-->
+    <!-- skills -->
+    <section class="section-wrap bt">
+      <div class="section-content">
+        <div class="inner-text">
+          <transition-group appear @enter="bt">
+            <h2 class="c" key="bt">blah blah blah blah blah</h2>
+            <h3 class="d" key="bt">
+              blah blah blah blah blah blah blah blah blah blah blah blah <br>
+              blah blah blah blah blah blah blah blah blah blah blah blah
+            </h3>
+            <!-- swiper area -->
+          </transition-group>
+        </div>
+      </div>
+    </section>
+    <!-- banner -->
+    <section class="section-wrap">
+      <img class="section-banner" src="../assets/images/sample_banner.png" alt="">
+    </section>
+    <section class="section-wrap at">
+      <div class="section-content">
+        <div class="inner-text">
+          <transition-group appear @enter="at">
+          </transition-group>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
@@ -62,21 +85,42 @@ export default {
         ease: 'power4.inOut',
       })
     },
+
+    bt() {
+      gsap.to(".c", {
+        scrollTrigger: {
+          trigger: ".bt",
+          start: "top center",
+          // end: "bottom bottom",
+          toggleActions: "play none none none", // play, pause, resume, reset, complete, reverse, none
+          markers: true // dev-tool 테스트용 마커 표시
+          // pin: true // 화면 고정기능
+        },
+        y: 0,
+        duration: 2,
+        opacity: 1,
+        ease: 'power4.inOut',
+      })
+
+      gsap.to(".d", {
+        scrollTrigger: {
+          trigger: ".bt",
+          start: "top center",
+          // end: "bottom bottom",
+          toggleActions: "play none none none", // play, pause, resume, reset, complete, reverse, none
+          markers: true // dev-tool 테스트용 마커 표시
+          // pin: true // 화면 고정기능
+        },
+        y: 0,
+        delay: 1,
+        duration: 2,
+        opacity: 1,
+        ease: 'power4.inOut',
+      })
+    },
   }
 }
 </script>
 
 <style scoped>
-.box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 150px;
-  height: 150px;
-  background-color: #dddddd;
-}
-
-.box p {
-
-}
 </style>
