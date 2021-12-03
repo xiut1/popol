@@ -9,7 +9,6 @@
             <h2 class="b" key="at">무야호 무야호 무야호</h2>
           </transition-group>
         </div>
-        <img class="" src="../assets/images/sample_image.jpg" alt="">
       </div>
     </section>
     <!-- skills -->
@@ -29,7 +28,6 @@
     </section>
     <!-- banner -->
     <section class="section-wrap">
-      <img class="section-banner" src="../assets/images/sample_banner.png" alt="">
     </section>
     <section class="section-wrap at">
       <div class="section-content">
