@@ -23,7 +23,6 @@ import mainVue from '@/components/mainVue.vue'
 import footerVue from '@/components/footerVue.vue'
 
 // custom css
-// import '@/assets/css/reset.css'
 import '@/assets/css/ui.css'
 
 export default {

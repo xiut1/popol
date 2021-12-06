@@ -1,19 +1,14 @@
 import Vue from 'vue'
 import App from './App.vue'
 
-// font-awesome
-import 'vue-awesome/icons/flag'
-import 'vue-awesome/icons'
-import Icon from 'vue-awesome/components/Icon'
+//fort awesome
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faHome, faUser, faFileAlt, faBriefcase, faImage, faEnvelope, faTimes, faClone } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
-Vue.component('v-icon', Icon)
+library.add( faHome, faUser, faFileAlt, faBriefcase, faImage, faEnvelope, faTimes, faClone )
 
-// bootstrap
-// import 'bootstrap/dist/css/bootstrap.css'
-// import 'bootstrap-vue/dist/bootstrap-vue.css'
-// import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
-
-// Vue.use(BootstrapVue, IconsPlugin)
+Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 Vue.config.productionTip = false
 
