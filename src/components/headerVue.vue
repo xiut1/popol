@@ -48,6 +48,11 @@
 </template>
 
 <script>
+import { faHome, faUser, faFileAlt, faBriefcase, faImage, faEnvelope, faTimes, faClone } from '@fortawesome/free-solid-svg-icons'
+import {library} from "@fortawesome/fontawesome-svg-core";
+
+library.add( faHome, faUser, faFileAlt, faBriefcase, faImage, faEnvelope, faTimes, faClone )
+
 export default {
   name: "headerVue",
   data () {
