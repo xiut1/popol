@@ -4,9 +4,10 @@
 
 <script>
 export default {
-  name: "footerVue"
+  name: "service"
 }
 </script>
 
 <style scoped>
+
 </style>

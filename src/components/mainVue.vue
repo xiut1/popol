@@ -128,7 +128,7 @@
 
             <div class="skills_list grid">
               <!-- frontend-skills -->
-              <div class="skills_data" v-for="(value, name,  index) in skills.front" v-bind:key="index">
+              <div class="skills_data" v-for="(value, name,  index) in skills.front.info" v-bind:key="index">
                 <div class="skills_titles">
                   <h3 class="skills_name"> {{ name }} </h3>
                   <span class="skikks_number"> {{ value.score }}% </span>
@@ -159,7 +159,7 @@
 
             <div class="skills_list grid">
               <!-- frontend-skills -->
-              <div class="skills_data" v-for="(value, name,  index) in skills.lib" v-bind:key="index">
+              <div class="skills_data" v-for="(value, name,  index) in skills.lib.info" v-bind:key="index">
                 <div class="skills_titles">
                   <h3 class="skills_name"> {{ name }} </h3>
                   <span class="skikks_number"> {{ value.score }}% </span>
@@ -190,7 +190,7 @@
 
             <div class="skills_list grid">
               <!-- frontend-skills -->
-              <div class="skills_data" v-for="(value, name,  index) in skills.others" v-bind:key="index">
+              <div class="skills_data" v-for="(value, name,  index) in skills.others.info" v-bind:key="index">
                 <div class="skills_titles">
                   <h3 class="skills_name"> {{ name }} </h3>
                   <span class="skikks_number"> {{ value.score }}% </span>
@@ -242,43 +242,49 @@ export default {
       skills: {
         front: {
           acd: true,
-          html: {
-            score: 90,
-            percentage: '90%'
-          },
-          css: {
-            score: 85,
-            percentage: '85%'
-          },
-          js: {
-            score: 75,
-            percentage: '75%'
+          info: {
+            html: {
+              score: 90,
+              percentage: '90%'
+            },
+            css: {
+              score: 85,
+              percentage: '85%'
+            },
+            js: {
+              score: 75,
+              percentage: '75%'
+            }
           }
         },
         lib: {
           acd: false,
-          vue: {
-            score: 50,
-            percentage: '50%'
-          },
-          react: {
-            score: 30,
-            percentage: '30%'
-          },
-          sass: {
-            score: 75,
-            percentage: '75%'
+          info: {
+            vue: {
+              score: 50,
+              percentage: '50%'
+            },
+            react: {
+              score: 30,
+              percentage: '30%'
+            },
+            sass: {
+              score: 75,
+              percentage: '75%'
+            }
           }
         },
         others: {
           acd: false,
-          photoshop: {
-            score: 65,
-            percentage: '50%'
-          },
-          zeplin: {
-            score: 50,
-            percentage: '50%'
+          info: {
+            photoshop: {
+              score: 65,
+              percentage: '50%'
+            },
+            zeplin: {
+              score: 50,
+              percentage: '50%'
+            }
           }
         }
       }

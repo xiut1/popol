@@ -250,7 +250,7 @@ img {
 }
 
 .home_blob {
-  width: 200px;
+  width: 14.25rem;
   fill: var(--first-color);
 }
 
@@ -328,7 +328,7 @@ img {
 
 /* about */
 .about_img {
-  width: 200px;
+  width: 14.25rem;
   border: .5rem;
   justify-self: center;
   align-self: center;
