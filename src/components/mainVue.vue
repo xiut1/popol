@@ -9,10 +9,10 @@
         <div class="home_content grid">
           <div class="home_social">
             <a href="" class="home_social-icon">
-              <font-awesome-icon icon="user-circle" />
+              <uil-github class="" />
             </a>
             <a href="" class="home_social-icon">
-              <font-awesome-icon icon="code-branch" />
+              <uil-instagram-alt class="" />
             </a>
           </div>
 
@@ -30,7 +30,7 @@
         129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028
         -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
 
-<!--                <image class="home_blob-img" x='12' y='18' xlink:href="../assets/images/perfill.png" />-->
+                <image class="home_blob-img" x='12' y='18' xlink:href="https://developer.mozilla.org/" />
               </g>
             </svg>
           </div>
@@ -44,14 +44,14 @@
             </p>
             <a href="" class="button button-flex">
               Contact Me
-              <font-awesome-icon icon="envelope" class="button_icon"/>
+              <uil-envelope-alt class="button_icon"/>
             </a>
           </div>
 
           <div class="home_scroll">
             <a href="" class="home_scroll-button button-flex">
               <span class="home_scroll-name">Scroll Down</span>
-              <font-awesome-icon icon="chevron-down" class="home_scroll-arrow"/>
+              <uil-mouse-alt class="home_scroll-arrow"/>
             </a>
           </div>
 
@@ -95,7 +95,7 @@
 
           <div class="about_buttons">
             <a href="" download="" class="button button-flex">
-              Download CV <font-awesome-icon icon="download" class="button_icon"/>
+              Download CV <uil-import class="button_icon"/>
             </a>
           </div>
         </div>
@@ -103,6 +103,107 @@
     </section>
 
     <!-- skills -->
+    <section id="skills" class="skills section">
+      <h2 class="section_title">Skills</h2>
+      <span class="section_subtitle">My technical level</span>
+
+      <div class="skills_container container grid">
+        <div>
+          <!-- skill 1 -->
+          <div class="skills_content" :class="{ 'skills_open' : skills.front.acd }">
+            <div class="skills_header" @click="skills.front.acd = !skills.front.acd">
+              <uil-brackets-curly class="skills_icon" />
+
+              <div class="skills_title">
+                <h1>
+                  Frontend skills
+                </h1>
+                <span class="skills_subtitle">
+                  More than 2 years
+                </span>
+              </div>
+
+              <uil-angle-down class="skills_arrow" />
+            </div>
+
+            <div class="skills_list grid">
+              <!-- frontend-skills -->
+              <div class="skills_data" v-for="(value, name,  index) in skills.front" v-bind:key="index">
+                <div class="skills_titles">
+                  <h3 class="skills_name"> {{ name }} </h3>
+                  <span class="skikks_number"> {{ value.score }}% </span>
+                </div>
+                <div class="skills_bar">
+                  <span class="skills_percentage" v-bind:style=" { width: value.percentage } "></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- skill 2 -->
+          <div class="skills_content" :class="{ 'skills_open' : skills.lib.acd }">
+            <div class="skills_header" @click="skills.lib.acd = !skills.lib.acd">
+              <uil-book-open class="skills_icon" />
+
+              <div class="skills_title">
+                <h1>
+                  Frontend lib skills
+                </h1>
+                <span class="skills_subtitle">
+                  More than 2 years
+                </span>
+              </div>
+
+              <uil-angle-down class="skills_arrow" />
+            </div>
+
+            <div class="skills_list grid">
+              <!-- frontend-skills -->
+              <div class="skills_data" v-for="(value, name,  index) in skills.lib" v-bind:key="index">
+                <div class="skills_titles">
+                  <h3 class="skills_name"> {{ name }} </h3>
+                  <span class="skikks_number"> {{ value.score }}% </span>
+                </div>
+                <div class="skills_bar">
+                  <span class="skills_percentage" v-bind:style=" { width: value.percentage } "></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- skill 3 -->
+          <div class="skills_content" :class="{ 'skills_open' : skills.others.acd }">
+            <div class="skills_header" @click="skills.others.acd = !skills.others.acd">
+              <uil-swatchbook class="skills_icon" />
+
+              <div class="skills_title">
+                <h1>
+                  Other
+                </h1>
+                <span class="skills_subtitle">
+                  More than 2 years
+                </span>
+              </div>
+
+              <uil-angle-down class="skills_arrow" />
+            </div>
+
+            <div class="skills_list grid">
+              <!-- frontend-skills -->
+              <div class="skills_data" v-for="(value, name,  index) in skills.others" v-bind:key="index">
+                <div class="skills_titles">
+                  <h3 class="skills_name"> {{ name }} </h3>
+                  <span class="skikks_number"> {{ value.score }}% </span>
+                </div>
+                <div class="skills_bar">
+                  <span class="skills_percentage" v-bind:style=" { width: value.percentage } "></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- qualification -->
 
@@ -122,16 +223,80 @@
 </template>
 
 <script>
-import { faUserCircle, faCodeBranch, faEnvelope, faChevronDown, faDownload } from '@fortawesome/free-solid-svg-icons'
-import {library} from "@fortawesome/fontawesome-svg-core";
-
-library.add( faUserCircle, faCodeBranch, faEnvelope, faChevronDown, faDownload )
+import {
+  UilGithub,
+  UilInstagramAlt,
+  UilMouseAlt,
+  UilEnvelopeAlt,
+  UilImport,
+  UilBracketsCurly,
+  UilAngleDown,
+  UilBookOpen,
+  UilSwatchbook
+} from '@iconscout/vue-unicons'
 
 export default {
-  name: "mainVue"
+  name: "mainVue",
+  data () {
+    return {
+      skills: {
+        front: {
+          acd: true,
+          html: {
+            score: 90,
+            percentage: '90%'
+          },
+          css: {
+            score: 85,
+            percentage: '85%'
+          },
+          js: {
+            score: 75,
+            percentage: '75%'
+          }
+        },
+        lib: {
+          acd: false,
+          vue: {
+            score: 50,
+            percentage: '50%'
+          },
+          react: {
+            score: 30,
+            percentage: '30%'
+          },
+          sass: {
+            score: 75,
+            percentage: '75%'
+          }
+        },
+        others: {
+          acd: false,
+          photoshop: {
+            score: 65,
+            percentage: '50%'
+          },
+          zeplin: {
+            score: 50,
+            percentage: '50%'
+          }
+        }
+      }
+    }
+  },
+  components: {
+    UilGithub,
+    UilInstagramAlt,
+    UilMouseAlt,
+    UilEnvelopeAlt,
+    UilImport,
+    UilBracketsCurly,
+    UilAngleDown,
+    UilBookOpen,
+    UilSwatchbook
+  }
 }
 </script>
 
 <style scoped>
-
 </style>

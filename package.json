@@ -13,6 +13,8 @@
     "@fortawesome/free-regular-svg-icons": "^5.15.4",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@fortawesome/vue-fontawesome": "^2.0.6",
+    "@iconscout/unicons": "^4.0.1",
+    "@iconscout/vue-unicons": "0.0.3",
     "core-js": "^3.6.5",
     "gsap": "^3.8.0",
     "vue": "^2.6.14"
