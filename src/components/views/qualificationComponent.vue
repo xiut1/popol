@@ -29,7 +29,7 @@
                   <span class="qualification_subtitle"> {{ value.subtitle }} </span>
                   <div class="qualification_calendar">
                     <uil-calendar-alt />
-                    {{ value.date }}
+                    <span> {{ value.date }} </span>
                   </div>
                 </div>
 
@@ -53,7 +53,7 @@
                   <span class="qualification_subtitle"> {{ value.subtitle }} </span>
                   <div class="qualification_calendar">
                     <uil-calendar-alt />
-                    {{ value.date }}
+                    <span> {{ value.date }} </span>
                   </div>
                 </div>
               </div>
@@ -73,7 +73,7 @@
                   <span class="qualification_subtitle"> {{ value.subtitle }} </span>
                   <div class="qualification_calendar">
                     <uil-calendar-alt />
-                    {{ value.date }}
+                    <span> {{ value.date }} </span>
                   </div>
                 </div>
 
@@ -97,7 +97,7 @@
                   <span class="qualification_subtitle"> {{ value.subtitle }} </span>
                   <div class="qualification_calendar">
                     <uil-calendar-alt />
-                    {{ value.date }}
+                    <span> {{ value.date }} </span>
                   </div>
                 </div>
               </div>
@@ -164,5 +164,4 @@ export default {
 </script>
 
 <style scoped>
-
 </style>

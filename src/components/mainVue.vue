@@ -14,6 +14,7 @@
     <qualificationComponent></qualificationComponent>
 
     <!-- service -->
+    <serviceComponent></serviceComponent>
 
     <!-- portfolio -->
 
@@ -32,6 +33,7 @@ import homeComponent from '@/components/views/homeComponent'
 import aboutComponent from '@/components/views/aboutComponent'
 import skillsComponent from '@/components/views/skillsComponent'
 import qualificationComponent from '@/components/views/qualificationComponent'
+import serviceComponent from '@/components/views/serviceComponent'
 
 export default {
   name: "mainVue",
@@ -39,7 +41,8 @@ export default {
     homeComponent,
     aboutComponent,
     skillsComponent,
-    qualificationComponent
+    qualificationComponent,
+    serviceComponent
   }
 }
 </script>
