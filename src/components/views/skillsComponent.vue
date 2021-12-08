@@ -24,7 +24,7 @@
 
           <div class="skills_list grid">
             <!-- frontend-skills -->
-            <div class="skills_data" v-for="(value, name,  index) in skills.front.info" v-bind:key="index">
+            <div class="skills_data" v-for="( value, name, index ) in skills.front.info" v-bind:key="index">
               <div class="skills_titles">
                 <h3 class="skills_name"> {{ name }} </h3>
                 <span class="skikks_number"> {{ value.score }}% </span>
@@ -55,7 +55,7 @@
 
           <div class="skills_list grid">
             <!-- frontend-skills -->
-            <div class="skills_data" v-for="(value, name,  index) in skills.lib.info" v-bind:key="index">
+            <div class="skills_data" v-for="( value, name, index ) in skills.lib.info" v-bind:key="index">
               <div class="skills_titles">
                 <h3 class="skills_name"> {{ name }} </h3>
                 <span class="skikks_number"> {{ value.score }}% </span>
@@ -86,7 +86,7 @@
 
           <div class="skills_list grid">
             <!-- frontend-skills -->
-            <div class="skills_data" v-for="(value, name,  index) in skills.others.info" v-bind:key="index">
+            <div class="skills_data" v-for="( value, name, index ) in skills.others.info" v-bind:key="index">
               <div class="skills_titles">
                 <h3 class="skills_name"> {{ name }} </h3>
                 <span class="skikks_number"> {{ value.score }}% </span>
@@ -111,7 +111,7 @@ import {
 } from '@iconscout/vue-unicons'
 
 export default {
-  name: "skills",
+  name: "skillsComponent",
   data () {
     return {
       skills: {
@@ -175,5 +175,4 @@ export default {
 </script>
 
 <style scoped>
-
 </style>

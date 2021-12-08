@@ -4,7 +4,7 @@
     <span class="section_subtitle">My introduction</span>
 
     <div class="about_container container grid">
-      <img class="about_img" src="../assets/images/perfil.png" alt="">
+      <img class="about_img" src="../../assets/images/perfil.png" alt="">
 
       <div class="about_data">
         <p class="about_descrption">
@@ -48,7 +48,7 @@ import {
 } from "@iconscout/vue-unicons";
 
 export default {
-  name: "about",
+  name: "aboutComponent",
   components: {
     UilImport,
   }
