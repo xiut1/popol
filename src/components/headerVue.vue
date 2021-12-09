@@ -20,7 +20,7 @@
             </a>
           </li>
           <li class="nav_item">
-            <a href="#service" class="nav_link nav_icon">
+            <a href="#services" class="nav_link nav_icon">
               <uil-suitcase-alt class="" /> Services
             </a>
           </li>

@@ -11,21 +11,20 @@
           <h3 class="services_title"> {{ value.content.title }} </h3>
         </div>
 
-        <span class="button button-flex button-samll button-link services_button">
+        <span class="button button-flex button-small button-link services_button" @click=" services.modal = !services.modal " >
           View More
-          <uil-arrow-right class="button_icon"/>
+          <uil-arrow-right class="button_icon" />
         </span>
 
         <div class="services_modal">
-          <div class="services_modal-content">
+          <div class="services_modal-content" :class=" { 'active' : !services.modal } ">
             <h4 class="services_modal-title"> {{ value.content.subtitle }} </h4>
             <uil-times class="services_modal-close"/>
 
             <ul class="services_modal-services grid">
-<!--              <li class="services_modal-service" v-for="( index ) in services.content.info" :key="index">-->
-              <li class="services_modal-service">
+              <li class="services_modal-service" v-for="( index ) in services" :key="index + 1">
                 <uil-check-circle class="services_modal-icon"/>
-                <p> {{ index.message }} </p>
+                <p> {{ index.content.messages }} </p>
               </li>
             </ul>
           </div>
@@ -50,22 +49,22 @@ export default {
       services: [
         {
           content: {
+            modal: false,
             title: 'Ui / Ux Designer 1',
             subtitle: 'Ui / Ux 1',
-            info: [
-              { message: 'foo' },
-              { message: 'boo' }
-            ]
+            messages: {
+              message: 'boo'
+            }
           }
         },
         {
           content: {
+            modal: false,
             title: 'Ui / Ux Designer 2',
             subtitle: 'Ui / Ux 2',
-            info: [
-              { message: 'blah blah blah blah ' },
-              { message: 'blah blah blah blah blah blah blah blah ' }
-            ]
+            messages: {
+              message: 'blah blah blah blah blah blah blah blah '
+            }
           }
         }
       ]
@@ -76,8 +75,7 @@ export default {
     UilArrowRight,
     UilTimes,
     UilCheckCircle
-  },
-  methods: {}
+  }
 }
 </script>
 

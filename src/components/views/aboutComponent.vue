@@ -7,7 +7,7 @@
       <img class="about_img" src="../../assets/images/perfil.png" alt="">
 
       <div class="about_data">
-        <p class="about_descrption">
+        <p class="about_description">
           blah blah blah blah blah blah blah blah blah blah blah blah blah <br/>
           blah blah blah blah blah blah blah blah blah blah blah blah blah
         </p>

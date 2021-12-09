@@ -349,7 +349,7 @@ img {
   align-self: center;
 }
 
-.about_descrption {
+.about_description {
   text-align: center;
   margin-bottom: var(--mb-2-5);
 }
@@ -438,15 +438,10 @@ img {
   background-color: var(--first-color);
 }
 
-.skills_content .skills_list{
+.skills_content .skills_list {
   height: 0;
   overflow: hidden;
 }
-
-/*.skills_close .skills_list {*/
-/*  height: 0;*/
-/*  overflow: hidden;*/
-/*}*/
 
 .skills_open .skills_list {
   height: max-content;
@@ -588,10 +583,15 @@ img {
   justify-content: center;
   align-items: center;
   padding: 0 1rem;
-  z-index: var(--z-modal );
-  opacity: 0;
-  visibility: hidden;
+  z-index: var(--z-modal);
+  /*opacity: 0;*/
+  /*visibility: hidden;*/
   transition: .3s;
+}
+
+.services_modal .active {
+  opacity: 1;
+  visibility: visible;
 }
 
 .services_modal-content {

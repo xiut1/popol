@@ -27,7 +27,7 @@
             <div class="skills_data" v-for="( value, name, index ) in skills.front.info" v-bind:key="index">
               <div class="skills_titles">
                 <h3 class="skills_name"> {{ name }} </h3>
-                <span class="skikks_number"> {{ value.score }}% </span>
+                <span class="skills_number"> {{ value.score }}% </span>
               </div>
               <div class="skills_bar">
                 <span class="skills_percentage" v-bind:style=" { width: value.percentage } "></span>
@@ -58,7 +58,7 @@
             <div class="skills_data" v-for="( value, name, index ) in skills.lib.info" v-bind:key="index">
               <div class="skills_titles">
                 <h3 class="skills_name"> {{ name }} </h3>
-                <span class="skikks_number"> {{ value.score }}% </span>
+                <span class="skills_number"> {{ value.score }}% </span>
               </div>
               <div class="skills_bar">
                 <span class="skills_percentage" v-bind:style=" { width: value.percentage } "></span>
@@ -89,7 +89,7 @@
             <div class="skills_data" v-for="( value, name, index ) in skills.others.info" v-bind:key="index">
               <div class="skills_titles">
                 <h3 class="skills_name"> {{ name }} </h3>
-                <span class="skikks_number"> {{ value.score }}% </span>
+                <span class="skills_number"> {{ value.score }}% </span>
               </div>
               <div class="skills_bar">
                 <span class="skills_percentage" v-bind:style=" { width: value.percentage } "></span>
