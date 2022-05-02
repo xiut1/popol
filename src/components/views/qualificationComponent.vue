@@ -5,11 +5,11 @@
 
     <div class="qualification_container container">
       <div class="qualification_tabs">
-        <div class="qualification_button button-flex" @click="qualification.tab =!qualification.tab">
+        <div class="qualification_button button-flex" @click="qualification.tab = !qualification.tab">
           <uil-graduation-cap class="qualification_icon" />
           Education
         </div>
-        <div class="qualification_button button-flex" @click="qualification.tab =!qualification.tab">
+        <div class="qualification_button button-flex" @click="qualification.tab = !qualification.tab">
           <uil-briefcase-alt class="qualification_icon" />
           Work
         </div>
