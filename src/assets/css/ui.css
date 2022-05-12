@@ -478,7 +478,7 @@ img {
   text-align: right;
 }
 
-.qualification_data_content {
+.qualification_data-content {
   display: grid;
   grid-template-columns: 1fr max-content 1fr;
   column-gap: 1.5rem;
@@ -501,7 +501,8 @@ img {
 }
 
 .qualification_calendar span {
-  margin-left: .25rem
+  margin-left: .25rem;
+  font-size: 10px;
 }
 
 .qualification_rounder {
@@ -520,13 +521,12 @@ img {
   transform: translate(6px, -7px);
 }
 
-.qualification_content {
+.qualification [data-content] {
   display: none;
 }
 
-.qualification_active {
+.qualification_active[data-content] {
   display: block;
-  transition: .5s;
 }
 
 /* services */
@@ -585,14 +585,14 @@ img {
   padding: 0 1rem;
   z-index: var(--z-modal);
   transition: .3s;
-  /*opacity: 0;*/
-  /*visibility: hidden;*/
+  opacity: 0;
+  visibility: hidden;
 }
 
-.services_modal-content .active {
+/*.services_modal-content .active {
   opacity: 1;
   visibility: visible;
-}
+}*/
 
 .services_modal-content {
   position: relative;
@@ -628,4 +628,10 @@ img {
 .services_modal-icon {
   color: var(--first-color);
   margin-right: var(--mb-0-25);
+}
+
+/* active Modal */
+.active-modal {
+  opacity: 1;
+  visibility: visible;
 }
