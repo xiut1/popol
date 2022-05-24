@@ -22,10 +22,9 @@
             <uil-times class="services_modal-close" />
 
             <ul class="services_modal-services grid">
-              <li class="services_modal-service" v-for="( index, value ) in services" v-bind:key="index">
-<!--              <li class="services_modal-service">-->
+              <li class="services_modal-service" v-for="( index ) in value.content.sLists" v-bind:key="index">
                 <uil-check-circle class="services_modal-icon"/>
-                <p> {{ value.message }} </p>
+                <p> {{ index.sList }} </p>
               </li>
             </ul>
           </div>
@@ -40,7 +39,7 @@ import {
   UilWebGrid,
   UilArrowRight,
   UilTimes,
-  // UilCheckCircle
+  UilCheckCircle
 } from "@iconscout/vue-unicons";
 
 export default {
@@ -52,18 +51,25 @@ export default {
           content: {
             title: 'title 1',
             subtitle: 'subtitle 1',
-            messages: {
-              message: 'boo'
-            }
+            sLists: [
+              {
+                sList: 'blahblahblahblahblahblahblahblah',
+              },
+              {
+                sList: 'blahblahblahblahblahblahblahblahblahblah22',
+              }
+            ]
           }
         },
         {
           content: {
             title: 'title 2',
             subtitle: 'subtitle 2',
-            messages: {
-              message: 'blah blah blah blah blah blah blah blah '
-            }
+            sLists: [
+              {
+                sList: 'blah',
+              }
+            ]
           }
         }
       ]
@@ -73,7 +79,7 @@ export default {
     UilWebGrid,
     UilArrowRight,
     UilTimes,
-    // UilCheckCircle
+    UilCheckCircle
   }
 }
 </script>

@@ -6,15 +6,15 @@
     <div class="portfolio_container container">
       <div>
         <!-- portfolio data -->
-        <div class="portfolio_content grid">
-<!--        <div class="portfolio_content grid" v-for=" ( item ) in portfolio " v-bind:key="portfolio.items">-->
-          <img class="portfolio_img" :src=" item.imgUrl ">
+<!--        <div class="portfolio_content grid">-->
+        <div class="portfolio_content grid" v-for="( index, value ) in portfolio" v-bind:key="index">
+<!--          <img class="portfolio_img" :src=" item.imgUrl ">-->
 
           <div class="portfolio_container container">
             <div class="portfolio_data">
-              <h3 class="portfolio_title"> {{ portfolio.items.title }} </h3>
+              <h3 class="portfolio_title"> {{ value.portfolio.items.title }} </h3>
               <p class="portfolio_description">
-                {{ portfolio.items.description }}
+                {{ value.portfolio.items.description }}
               </p>
               <a href="#" class="button button-flex button-small portfolio_button">
                 Demo
@@ -37,13 +37,22 @@ export default {
   name: "portfolioComponent",
   data () {
     return {
-      portfolio: {
-        items: {
-          imgUrl: '../../assets/images/portfolio1.jpg',
-          title: 'Mordern Website',
-          description: 'Website adaptable all device, with ui component and animated interaction',
+      portfolio: [
+        {
+          items: {
+            imgUrl: '../../assets/images/portfolio1.jpg',
+            title: 'Mordern Website',
+            description: 'Website adaptable all device, with ui component and animated interaction',
+          }
+        },
+        {
+          items: {
+            imgUrl: '../../assets/images/portfolio1.jpg',
+            title: 'Mordern Website',
+            description: 'Website adaptable all device, with ui component and animated interaction',
+          }
         }
-      }
+      ]
     }
   },
   components: {
