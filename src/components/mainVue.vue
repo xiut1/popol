@@ -20,7 +20,7 @@
     <portfolioComponent></portfolioComponent>
 
     <!--  -->
-    <projectMindComponent></projectMindComponent>
+<!--    <projectMindComponent></projectMindComponent>-->
 
     <!--  -->
 
@@ -37,7 +37,7 @@ import skillsComponent from '@/components/views/skillsComponent'
 import qualificationComponent from '@/components/views/qualificationComponent'
 import serviceComponent from '@/components/views/serviceComponent'
 import portfolioComponent from '@/components/views/portfolioComponent'
-import projectMindComponent from '@/components/views/projectMind'
+// import projectMindComponent from '@/components/views/projectMind'
 
 export default {
   name: "mainVue",
@@ -48,7 +48,7 @@ export default {
     qualificationComponent,
     serviceComponent,
     portfolioComponent,
-    projectMindComponent
+    // projectMindComponent
   }
 }
 </script>

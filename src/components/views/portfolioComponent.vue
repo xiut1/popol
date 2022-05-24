@@ -6,15 +6,14 @@
     <div class="portfolio_container container">
       <div>
         <!-- portfolio data -->
-<!--        <div class="portfolio_content grid">-->
         <div class="portfolio_content grid" v-for="( index, value ) in portfolio" v-bind:key="index">
 <!--          <img class="portfolio_img" :src=" item.imgUrl ">-->
 
           <div class="portfolio_container container">
             <div class="portfolio_data">
-              <h3 class="portfolio_title"> {{ value.portfolio.items.title }} </h3>
+              <h3 class="portfolio_title"> {{ value.title }} </h3>
               <p class="portfolio_description">
-                {{ value.portfolio.items.description }}
+                {{ value.description }}
               </p>
               <a href="#" class="button button-flex button-small portfolio_button">
                 Demo
@@ -41,14 +40,14 @@ export default {
         {
           items: {
             imgUrl: '../../assets/images/portfolio1.jpg',
-            title: 'Mordern Website',
+            title: 'Mordern Website1',
             description: 'Website adaptable all device, with ui component and animated interaction',
           }
         },
         {
           items: {
             imgUrl: '../../assets/images/portfolio1.jpg',
-            title: 'Mordern Website',
+            title: 'Mordern Website2',
             description: 'Website adaptable all device, with ui component and animated interaction',
           }
         }
@@ -56,8 +55,20 @@ export default {
     }
   },
   components: {
-    UilArrowRight
-  }
+    UilArrowRight,
+  },
+  setup() {
+    const onSwiper = (swiper) => {
+      console.log(swiper);
+    };
+    const onSlideChange = () => {
+      console.log('slide change');
+    };
+    return {
+      onSwiper,
+      onSlideChange,
+    };
+  },
 }
 </script>
 
